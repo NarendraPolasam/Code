@@ -1,0 +1,11 @@
+.is-activeA{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    display: block;
+    width: 64px;
+    height: 64px;
+    z-index: 5; 
+    background-image: url("./assets/images/spinner.gif");
+   
+}

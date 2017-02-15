@@ -1,0 +1,11 @@
+md-sidenav-layout.m2app-dark {
+  background: lightblue;
+}
+
+
+.app-action {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

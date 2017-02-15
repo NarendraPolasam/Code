@@ -1,0 +1,21 @@
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+  <md-toolbar color="primary">
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+  </md-toolbar>
+
+  <div class="app-content">
+    <md-card class="app-input-section">
+      <md-input placeholder="First name"></md-input>
+      <md-input placeholder="Last name"></md-input>
+      <md-input placeholder="Email"></md-input>
+      <md-input placeholder="Phone Number"></md-input>
+    </md-card>
+     <md-card>
+      <button md-raised-button color="primary">Submit</button>
+    </md-card>
+  </div>
+
+</md-sidenav-layout>
+  
+

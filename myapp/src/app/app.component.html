@@ -1,0 +1,25 @@
+
+<div class = "container main-container">
+	<div class="container-fluid noPadding">
+			<nav class="navbar navbar-default col-xs-12 col-sm-10 col-md-9 col-lg-12 xlPaddingLeft1 mdPaddingLeft1Tablet">
+				<div class="container-fluid noPadding">
+						<div>
+							<ul class="nav navbar-nav mdMagLeft2 xsMarTop mdMagLeft2Tab">
+								<li ><a [routerLink]="['/Home']" routerLinkActive= "router-link-active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+								<li> <a [routerLink]="['/Cards']" routerLinkActive= "router-link-active">Cards</a></li>
+								<li > <a [routerLink]="['/mtheme']" routerLinkActive= "router-link-active">Theme</a></li> 
+							</ul>
+						</div>
+				</div>
+			</nav>
+
+	</div>
+	<section _ngcontent-bco-9="" class="container">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mdPaddingTop2 bgWhite mdPaddingbtm borderRadius1">
+		<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+	</section>
+	<ht-footer></ht-footer>
+</div>
