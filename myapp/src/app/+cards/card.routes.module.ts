@@ -1,11 +1,12 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule,Routes } from '@angular/router';
 import { CardComponent } from './card.component';
+import { DrawCardComponent } from './drawcard/drawcard.component';
 const cardRoutes : Routes = [
    { path: '',
     component: CardComponent,
     children: [
-          { path: 'Cards', component:CardComponent  },  
+          { path: '', component:DrawCardComponent },  
        ]
    }
 ];

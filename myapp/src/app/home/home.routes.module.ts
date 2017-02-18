@@ -8,7 +8,7 @@ const homeRoutes : Routes = [
        component:HomeComponent ,
         children:[
           {path:"Home",component:MovieListComponent},
-          {path:"movie",component:MovieItemComponent},
+          {path:"movie/:id",component:MovieItemComponent},
           { path:'', redirectTo:'/Home',pathMatch:'full'}],
     }
 ];

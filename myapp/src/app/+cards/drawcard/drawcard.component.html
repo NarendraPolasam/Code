@@ -1,0 +1,22 @@
+  <div class="button-row">
+    <button md-raised-button (click) = " highCard()" [disabled]="isShow" >Higher</button>
+    <button md-raised-button (click) = "lowerCard()" [disabled]="isShow">Lower</button>
+    <button md-raised-button (click) ="tryAgain()" [disabled]="isTryAgain">Try Again</button>
+  </div>
+  <div *ngIf="deckItems" >
+        <div *ngIf="item1" class="dv">
+                    <md-card-header>
+                        <md-card-title>{{item1.suit}}</md-card-title>
+                    </md-card-header>
+                    <img md-card-image src="{{item1.image}}">
+        </div>
+         <div *ngIf="item2" class="dv">
+                    <md-card-header>
+                        <md-card-title>{{item2.suit}}</md-card-title>
+                    </md-card-header>
+                    <img md-card-image src="{{item2.image}}">
+        </div>
+        <div>
+            <span>{{message}}</span>
+         </div>    
+</div>

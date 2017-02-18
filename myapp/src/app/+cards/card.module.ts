@@ -6,15 +6,17 @@ import { CardRoutingModule } from './card.routes.module'
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card.component'
 import { CardService } from './card.services';
-
+import {MaterialModule} from '@angular/material';
+import { DrawCardComponent } from './drawcard/drawcard.component';
 @NgModule({
   imports: [
       CommonModule, 
       FormsModule,
       CardRoutingModule,
+       MaterialModule.forRoot()
   ],
-  declarations: [CardComponent],
-  exports: [CardComponent],
+  declarations: [CardComponent,DrawCardComponent],
+  exports: [CardComponent,DrawCardComponent],
   providers: [CardService]
   
 })

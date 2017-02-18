@@ -1,1 +1,12 @@
-<div> Movie List Components </div>
+<div *ngIf="movies">
+<md-grid-list cols="2">
+ <div *ngFor="let movie of movies">
+        <md-grid-tile >
+            <a (click)="details(movie.id)" class="aCursor">
+                <img src='https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}'>
+            </a>
+            <h3 md-line> {{movie.title}} </h3>
+        </md-grid-tile>
+ </div>
+</md-grid-list>
+</div>

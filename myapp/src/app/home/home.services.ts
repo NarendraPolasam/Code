@@ -16,17 +16,25 @@ export class HomeServices{
     private httpRequestConstants: HttpRequestConstants) { }
 
   
-  getPopularMovies(object:any) {
-    //let body = JSON.stringify(object);
-    //this.spinnerService.show();
-    return this.http.get("",  this.httpRequestConstants.RequestOptions)
+  getPopularMovies() {
+  let object = '?api_key='+CONFIG.apiUrls.apiKey+'&language=en-US&page=1';
+    return this.http.get(`${CONFIG.apiUrls.popularMovie+object}`, this.httpRequestConstants.RequestOptions)
       .map((response:Response) => 
            response.json()
        )
       .catch(this.response.handleError)
       .finally(() => {
-        //this.spinnerService.hide()
       });
   }
+  getMovieById(id:number) {
+    let key ='?api_key=2eabdeb3ec19cb7abc472ac8bae0bd10&language=en-US';
+      return this.http.get(`${CONFIG.apiUrls.moviebyId}/${id}${key}`, this.httpRequestConstants.RequestOptions)
+      .map((response: Response) =>
+      response.json()
+      ).catch(this.response.handleError)
+      .finally(() => {
+      });
+ 
+    }
 
 }
